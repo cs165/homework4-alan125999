@@ -1,3 +1,56 @@
 /*
 TODO(you): Write any additional styles you need here.
 */
+
+#music-player {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+}
+
+.gif {
+  flex: 1 1;
+  position: relative;
+}
+
+.layer {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.foreground {
+  z-index: 1;
+}
+
+.control-bar {
+  flex: 0 0 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.play-btn {
+  height: 60px;
+}
+
+.loading {
+  color: #e2e2e2;
+  font-size: 2em;
+  font-style: italic;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+}
