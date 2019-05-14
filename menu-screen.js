@@ -40,9 +40,10 @@ class MenuScreen {
     const form = document.querySelector('form');
     form.addEventListener('submit', event => {
       event.preventDefault();
+      const gifValue = this.theme.value.trim();
       const data = {
         songValue: this.songs[this.selector.selectedIndex].songUrl,
-        gifValue: this.theme.value,
+        gifValue: (gifValue === '') ? this._randomTheme() : gifValue,
       };
       console.log('form submitted! data:');
       console.log(data);
@@ -51,6 +52,9 @@ class MenuScreen {
   }
 
   _renderTheme() {
+    this.theme.value = this._randomTheme();
+  }
+  _randomTheme() {
     const themes = [
       'candy',
       'charlie brown',
@@ -64,7 +68,7 @@ class MenuScreen {
       'space'
     ];
     const randIndex = Math.floor(Math.random() * themes.length);
-    this.theme.value = themes[randIndex];
+    return themes[randIndex];
   }
 
   hide() {

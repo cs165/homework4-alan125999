@@ -42,7 +42,7 @@ class GifDisplay {
       q: theme,
       limit: 25,
       rating: 'g',
-      api_key: 'dc6zaTOxFJmzC',
+      api_key: '6G9cMqqdAtg8AzzBNJQ4XcEb15XaM5jf',
     });
     fetch(url)
       .then(Response => Response.json())
